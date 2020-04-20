@@ -51,6 +51,8 @@ public class CalculatorUI {
         }
         return true;
     }
+    
+    //здесь было изменение
 
     private boolean readOperation() {
         try {
