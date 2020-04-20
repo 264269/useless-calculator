@@ -24,6 +24,11 @@ public enum CalculatorOperations{
         public double action(double[] numbers) {
             return (numbers[0] % numbers[1]);
         }
+    }, POW {
+        @Override
+        public double action(double[] numbers) {
+            return (Math.pow(numbers[0], numbers[1]));
+        }
     };
     public abstract double action(double[] numbers) throws Exception;
 }

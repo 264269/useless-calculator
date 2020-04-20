@@ -36,8 +36,10 @@ public class CalculatorUI {
             this.wordOperation = "MULTIPLY";
         } else if (this.operation.equals("/")) {
             this.wordOperation = "DIVIDE";
-        } else if (this.operation.equals("%")){
+        } else if (this.operation.equals("%")) {
             this.wordOperation = "MOD";
+        } else if (this.operation.equals("^")) {
+            this.wordOperation = "POW";
         } else {
             return false;
         }
@@ -78,7 +80,8 @@ public class CalculatorUI {
                 || operation.equals("+")
                 || operation.equals("-")
                 || operation.equals("/")
-                || operation.equals("%")) {
+                || operation.equals("%")
+                || operation.equals("^")) {
             return true;
         } else {
             return false;
