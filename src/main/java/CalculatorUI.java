@@ -40,6 +40,8 @@ public class CalculatorUI {
             this.wordOperation = "MOD";
         } else if (this.operation.equals("^")) {
             this.wordOperation = "POW";
+        } else if (this.operation.equals("cos")) {
+            this.wordOperation = "COS";
         } else if (this.operation.equals("sin")) {
             this.wordOperation = "SIN";
         } else {
@@ -94,7 +96,8 @@ public class CalculatorUI {
     }
 
     private boolean isUnary(String operation) {
-        if (operation.equals("cos")) {
+        if (operation.equals("cos")
+                || operation.equals("sin")) {
             return true;
         } else {
             return false;

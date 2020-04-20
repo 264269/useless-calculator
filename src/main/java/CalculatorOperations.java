@@ -33,6 +33,11 @@ public enum CalculatorOperations{
         @Override
         public double action(double[] numbers) {
             return (Math.cos(numbers[0]));
+            }
+    }, SIN {
+        @Override
+        public double action(double[] numbers) {
+            return (Math.sin(numbers[0]));
         }
     };
     public abstract double action(double[] numbers) throws Exception;
