@@ -19,6 +19,11 @@ public enum CalculatorOperations{
         public double action(double[] numbers) {
             return (numbers[0] / numbers[1]);
         }
+    }, MOD {
+        @Override
+        public double action(double[] numbers) {
+            return (numbers[0] % numbers[1]);
+        }
     };
     public abstract double action(double[] numbers) throws Exception;
 }
