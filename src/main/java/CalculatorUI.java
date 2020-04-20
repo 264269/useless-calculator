@@ -40,6 +40,8 @@ public class CalculatorUI {
             this.wordOperation = "MOD";
         } else if (this.operation.equals("^")) {
             this.wordOperation = "POW";
+        } else if (this.operation.equals("sin")) {
+            this.wordOperation = "SIN";
         } else {
             return false;
         }
@@ -67,6 +69,9 @@ public class CalculatorUI {
                 this.numbers[0] = Double.parseDouble(reader.readLine());
                 System.out.println("Enter second number:");
                 this.numbers[1] = Double.parseDouble(reader.readLine());
+            } else if (isUnary(this.operation)) {
+                System.out.println("Enter number:");
+                this.numbers[0] = Double.parseDouble(reader.readLine());
             }
             return true;
         } catch (Exception e) {
@@ -82,6 +87,14 @@ public class CalculatorUI {
                 || operation.equals("/")
                 || operation.equals("%")
                 || operation.equals("^")) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private boolean isUnary(String operation) {
+        if (operation.equals("sin")) {
             return true;
         } else {
             return false;
