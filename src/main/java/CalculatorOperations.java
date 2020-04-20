@@ -29,6 +29,11 @@ public enum CalculatorOperations{
         public double action(double[] numbers) {
             return (Math.pow(numbers[0], numbers[1]));
         }
+    }, COS {
+        @Override
+        public double action(double[] numbers) {
+            return (Math.cos(numbers[0]));
+        }
     };
     public abstract double action(double[] numbers) throws Exception;
 }
