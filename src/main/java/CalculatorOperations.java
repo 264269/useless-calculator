@@ -39,6 +39,11 @@ public enum CalculatorOperations{
         public double action(double[] numbers) {
             return (Math.sin(numbers[0]));
         }
+    }, XOR {
+        @Override
+        public double action(double[] numbers) {
+            return ((int)numbers[0]^(int)numbers[1]);
+        }
     };
     public abstract double action(double[] numbers) throws Exception;
 }

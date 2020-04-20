@@ -44,6 +44,8 @@ public class CalculatorUI {
             this.wordOperation = "COS";
         } else if (this.operation.equals("sin")) {
             this.wordOperation = "SIN";
+        } else if (this.operation.equals("xor")) {
+            this.wordOperation = "XOR";
         } else {
             return false;
         }
@@ -88,7 +90,8 @@ public class CalculatorUI {
                 || operation.equals("-")
                 || operation.equals("/")
                 || operation.equals("%")
-                || operation.equals("^")) {
+                || operation.equals("^")
+                || operation.equals("xor")) {
             return true;
         } else {
             return false;
